@@ -22,10 +22,11 @@
         <td><%= book.price %></td>
         <td><%= book.publish_company %></td>
         <td><%= book.published_date %></td>
-        <td><% if book.photo_link == null%>
-          <%= image_tag('http://www.town.minamiechizen.lg.jp/kurasi/103/bunka/p001445_d/img/022.jpg',:size => '32x32')%>
-        <% else %>
-          <%= image_tag(book.photo_link,:size => '32x32'%>
+        <td>
+        <% if book.photo_link == nil %>　
+          <%= image_tag('http://www.town.minamiechizen.lg.jp/kurasi/103/bunka/p001445_d/img/022.jpg', :size => '45x45') %>
+        <% else %> 
+          <%= image_tag(book.photo_link,:size => '45x45')%>
         <% end %>
         </td>
         <td><%= link_to 'Show', book %></td>
