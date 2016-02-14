@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Books</h1>
+<h1>蔵書管理システム</h1>
 
 <table>
   <thead>
@@ -22,9 +22,8 @@
         <td><%= book.price %></td>
         <td><%= book.publish_company %></td>
         <td><%= book.published_date %></td>
-        <td><% if book.photo_link == null then %>
+        <td><% if book.photo_link == null%>
           <%= image_tag('http://www.town.minamiechizen.lg.jp/kurasi/103/bunka/p001445_d/img/022.jpg',:size => '32x32')%>
-          
         <% else %>
           <%= image_tag(book.photo_link,:size => '32x32'%>
         <% end %>
